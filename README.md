@@ -25,14 +25,13 @@
 <p>🔗 You can check out the source code and test cases on  
 <a href="https://github.com/nowheresin/argparse-helper" target="_blank">GitHub: nowheresin/argparse-helper</a>.  
 Feel free to leave a suggestion or open an issue!</p>
----
+----
 
-<h3>Change-log.</h3>
+<h3>Change-log</h3>
 <ul>
 	<li>⬆️ <em>To Be Determined.</em></li>
 	<li>⬆️ 2025.5.5 – This is the <strong>first version</strong>.</li>
 </ul>
-
 
 ---
 
