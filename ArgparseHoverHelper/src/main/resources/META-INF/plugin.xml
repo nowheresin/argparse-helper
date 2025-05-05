@@ -1,0 +1,79 @@
+<idea-plugin>
+    <id>argparse.helper</id>
+    <name>Argparse Helper</name>
+    <version>1.0</version>
+    <vendor email="nowheresin@gmail.com">Nowheresin</vendor>
+
+    <description>
+        <![CDATA[
+            <p><strong>This is the very first helper plugin for <code>argparse</code> in Python!</strong> 🎉</p>
+
+            <p>It’s designed to make working with complex <code>argparse</code> references easier and more enjoyable. Here’s what it offers:</p>
+
+            <ul>
+                <li><strong>Auto-completion</strong>: Once you’ve defined your <code>argparse</code> parser, typing <code>arg.</code> brings up suggestions automatically.</li>
+                <li><strong>Quick info on hover</strong>: Hovering over <code>arg.xxx</code> shows a tooltip with the argument’s details.</li>
+                <li><strong>Jump to definition</strong>: Place your cursor on <code>arg.xxx</code> and press <kbd>Alt</kbd> + <kbd>A</kbd> to jump directly to its <code>add_argument</code> definition.</li>
+            </ul>
+
+            <p><em>(I originally wanted to support Ctrl+Click navigation, but couldn’t get it to work. If you can make it happen, feel free to get in touch!)</em></p>
+
+            <p>This is my first plugin, so there might still be some bugs, but it’s already pretty handy for daily use.</p>
+
+            <p><strong>Hope it helps you!</strong></p>
+
+            <p>🔗 You can check out the source code and test cases on
+            <a href="https://github.com/nowheresin/argparse-helper" target="_blank">GitHub: nowheresin/argparse-helper</a>.
+            Feel free to leave a suggestion or open an issue!</p>
+        ]]>
+    </description>
+
+    <change-notes><![CDATA[
+        <h3>Change-log</h3>
+        <ul>
+            <li>⬆️ <em>To Be Determined.</em></li>
+            <li>⬆️ 2025.5.5 – This is the <strong>first version</strong>.</li>
+        </ul>
+    ]]>
+    </change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.python</depends>
+<!--    <depends>PythonCore</depends>-->
+
+    <extensions defaultExtensionNs="com.intellij">
+<!--        smart tips.-->
+        <lang.documentationProvider language="Python" implementationClass="com.argparsedocumentprovider.ArgparseDocumentationProvider"/>
+    </extensions>
+
+    <extensions defaultExtensionNs="com.intellij">
+<!--        smart completion.-->
+        <completion.contributor language="Python" implementationClass="com.argparsecompletioncontributor.ArgparseCompletionContributor"/>
+    </extensions>
+
+    <actions>
+        <action id="com.gotoargdefinitionaction.GoToArgDefinitionAction"
+                class="com.gotoargdefinitionaction.GoToArgDefinitionAction"
+                text="Jump to the Definition."
+                description="Cursor on args.xxx, with alt+a, and jump to the definition.">
+            <keyboard-shortcut keymap="$default" first-keystroke="alt A"/>
+        </action>
+    </actions>
+
+<!--    <extensions defaultExtensionNs="com.intellij">-->
+<!--        &lt;!&ndash; 将 ArgparseReferenceContributor 应用于 Python 语言 &ndash;&gt;-->
+<!--        <psi.referenceContributor language="Python" implementation="com.myreferencecontributor.ArgparseReferenceContributor"/>-->
+<!--    </extensions>-->
+
+
+    <!--    <actions>-->
+<!--        <action id="com.printcurrentlineaction.PrintCurrentLineAction"-->
+<!--                class="com.printcurrentlineaction.PrintCurrentLineAction"-->
+<!--                text="Print Current Line"-->
+<!--                description="Print the current line to console">-->
+<!--            <keyboard-shortcut keymap="$default" first-keystroke="alt B"/>-->
+<!--        </action>-->
+<!--    </actions>-->
+
+
+</idea-plugin>

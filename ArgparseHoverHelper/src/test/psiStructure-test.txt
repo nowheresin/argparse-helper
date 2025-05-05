@@ -1,0 +1,43 @@
+======= PSI Tree =======
+- # main.py
+import parser_config as aa
+args1 = aa.build_parser().parse_args()
+# print(args1.learning_rate111)
+print(args1.lr111)
+
+
+ (com.jetbrains.python.psi.impl.PyFileImpl)
+  - # main.py (com.intellij.psi.impl.source.tree.PsiCommentImpl)
+  - 
+ (com.intellij.psi.impl.source.tree.PsiWhiteSpaceImpl)
+  - import parser_config as aa (com.jetbrains.python.psi.impl.PyImportStatementImpl)
+    - parser_config as aa (com.jetbrains.python.psi.impl.PyImportElementImpl)
+      - parser_config (com.jetbrains.python.psi.impl.PyReferenceExpressionImpl)
+      - aa (com.jetbrains.python.psi.impl.PyTargetExpressionImpl)
+  - 
+ (com.intellij.psi.impl.source.tree.PsiWhiteSpaceImpl)
+  - args1 = aa.build_parser().parse_args() (com.jetbrains.python.psi.impl.PyAssignmentStatementImpl)
+    - args1 (com.jetbrains.python.psi.impl.PyTargetExpressionImpl)
+    - aa.build_parser().parse_args() (com.jetbrains.python.psi.impl.PyCallExpressionImpl)
+      - aa.build_parser().parse_args (com.jetbrains.python.psi.impl.PyReferenceExpressionImpl)
+        - aa.build_parser() (com.jetbrains.python.psi.impl.PyCallExpressionImpl)
+          - aa.build_parser (com.jetbrains.python.psi.impl.PyReferenceExpressionImpl)
+            - aa (com.jetbrains.python.psi.impl.PyReferenceExpressionImpl)
+          - () (com.jetbrains.python.psi.impl.PyArgumentListImpl)
+      - () (com.jetbrains.python.psi.impl.PyArgumentListImpl)
+  - 
+ (com.intellij.psi.impl.source.tree.PsiWhiteSpaceImpl)
+  - # print(args1.learning_rate111) (com.intellij.psi.impl.source.tree.PsiCommentImpl)
+  - 
+ (com.intellij.psi.impl.source.tree.PsiWhiteSpaceImpl)
+  - print(args1.lr111) (com.jetbrains.python.psi.impl.PyExpressionStatementImpl)
+    - print(args1.lr111) (com.jetbrains.python.psi.impl.PyCallExpressionImpl)
+      - print (com.jetbrains.python.psi.impl.PyReferenceExpressionImpl)
+      - (args1.lr111) (com.jetbrains.python.psi.impl.PyArgumentListImpl)
+        - args1.lr111 (com.jetbrains.python.psi.impl.PyReferenceExpressionImpl)
+          - args1 (com.jetbrains.python.psi.impl.PyReferenceExpressionImpl)
+  - 
+
+
+ (com.intellij.psi.impl.source.tree.PsiWhiteSpaceImpl)
+========================
